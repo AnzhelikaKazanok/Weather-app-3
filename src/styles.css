@@ -3,11 +3,31 @@
   border-radius: 15px;
   padding: 20px;
   margin: 20px auto;
-  max-width: 600px;
+  max-width: 800px;
   background-color: #42637a;
   font-family: josefin slab;
   color: #effbff;
 }
 h1 {
   text-align: center;
+}
+.date_information {
+  list-style: none;
+}
+.search-button {
+  border: 0.5px solid #42637a;
+  border-radius: 5px;
+  width: 100px;
+  height: 38px;
+  background-color: #384955;
+  color: #effbff;
+}
+:search-form {
+  text-align: center;
+}
+.date-information {
+  text-align: center;
+}
+.current-temperature {
+  margin: 0 auto;
 }

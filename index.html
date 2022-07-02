@@ -25,23 +25,41 @@
   <body>
     <div class="container">
       <div class="weather_app">
+        <form id="search-form" class="mb-4">
+          <div class="row">
+            <div class="col-9">
+              <input
+                type="search"
+                placeholder="Type a city"
+                class="form-control"
+              />
+            </div>
+            <div class="col-3">
+              <input type="submit" value="Search" class="search-button" />
+            </div>
+          </div>
+        </form>
         <h1>Kyiv</h1>
-        <ul class="date_information">
-          <li>Saturday</li>
-          <li>July,2</li>
-          <li>11:00</li>
-        </ul>
-        <span>
-          <img src="" alt="clear" />
+        <div class="row date-information">
+          <div class="col-4">July, 2</div>
+          <div class="col-4">Saturday</div>
+          <div class="col-4">11:00</div>
+        </div>
+
+        <span class="current-temperature">
+          <img src="images/sun.svg" alt="clear" />
           30 °C | °F
         </span>
         <div class="row">
           <div class="col-md">
-            <img src="" alt="humidity" />
+            <img src="images/free_icon_1.svg" alt="humidity" />
             100 %
           </div>
           <div class="col-md">
-            <img src="" alt="wind" />
+            <img
+              src="images/3741348_heavy rain_rain_weather_icon.svg"
+              alt="wind"
+            />
             12 km/h
           </div>
         </div>
