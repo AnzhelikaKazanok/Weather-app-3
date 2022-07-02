@@ -1,0 +1,13 @@
+.weather_app {
+  border: 1px solid #42637a;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+  background-color: #42637a;
+  font-family: josefin slab;
+  color: #effbff;
+}
+h1 {
+  text-align: center;
+}
