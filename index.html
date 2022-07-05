@@ -15,12 +15,9 @@
       crossorigin="anonymous"
     />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Josefin+Slab:wght@100;300;400&family=Montserrat:ital,wght@0,400;0,700;1,700&family=Quicksand:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Josefin+Slab:wght@100;300;400&family=Kaushan+Script&family=Montserrat:ital,wght@0,400;0,700;1,700&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   </head>
   <body>
     <div class="container">
@@ -39,17 +36,30 @@
             </div>
           </div>
         </form>
-        <h1>Kyiv</h1>
+        <h1 class="find-city">Kyiv</h1>
         <div class="current-temperature-details">
           <div class="row">
-            <div class="col">
-              <h4>Saturday</h4>
+            <div class="col current-details">
+              <h4 class="current-day">Saturday</h4>
               <h5 class="date-today">May, 17th</h5>
               <h5 class="time-today">14:00</h5>
             </div>
-            <div class="col">
+            <div class="col current-temperature">
               <img src="images/sun-60.png" alt="clear" />
               <strong> 30 </strong> °C | °F
+            </div>
+            <div class="col current-humidity-windy">
+              <p class="humidity">
+                <img
+                  src="images/humidity-wet-60.png"
+                  height="30"
+                  alt="humidity"
+                />
+                100 %
+              </p>
+              <p class="windy"></p>
+                <img src="images/wind-60.png" height="30" alt="wind" /> 12 km/h
+              </p>
             </div>
           </div>
         </div>
