@@ -29,5 +29,44 @@ h1 {
   text-align: center;
 }
 .current-temperature {
-  margin: 0 auto;
+  text-align: center;
+}
+.humidity-windy {
+  text-align: center;
+}
+.my-name {
+  text-align: center;
+  font-family: josefin slab;
+  color: #42637a;
+}
+.coder-information {
+  text-align: center;
+  font-family: josefin slab;
+}
+.weather-forecast {
+  text-align: center;
+}
+.weather-forecast-block1 {
+  background: linear-gradient(
+    180.3deg,
+    rgb(221, 221, 221) 5.5%,
+    rgb(110, 136, 161) 90.2%
+  );
+  background-blend-mode: soft-light;
+  border-radius: 20px;
+}
+.forecast-details2 {
+  background: radial-gradient(
+    circle at 50.3% 44.5%,
+    rgb(116, 147, 179) 0%,
+    rgb(62, 83, 104) 100.2%
+  );
+  background-blend-mode: soft-light;
+  border-radius: 20px;
+}
+
+.forecast-details3 {
+  background: #384955;
+
+  border-radius: 20px;
 }
