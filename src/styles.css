@@ -22,8 +22,11 @@ h1 {
   background-color: #384955;
   color: #effbff;
 }
-:search-form {
-  text-align: center;
+form {
+  position: relative;
+  bottom: ;
+  left: 150px;
+  max-width: 500px;
 }
 .date-information {
   text-align: center;
@@ -46,27 +49,18 @@ h1 {
 .weather-forecast {
   text-align: center;
 }
-.weather-forecast-block1 {
-  background: linear-gradient(
-    180.3deg,
-    rgb(221, 221, 221) 5.5%,
-    rgb(110, 136, 161) 90.2%
-  );
-  background-blend-mode: soft-light;
-  border-radius: 20px;
-}
-.forecast-details2 {
-  background: radial-gradient(
-    circle at 50.3% 44.5%,
-    rgb(116, 147, 179) 0%,
-    rgb(62, 83, 104) 100.2%
-  );
-  background-blend-mode: soft-light;
-  border-radius: 20px;
-}
 
-.forecast-details3 {
-  background: #384955;
-
-  border-radius: 20px;
+.weather-forecast-block {
+  background: #7596ae;
+  border-radius: 15px;
+}
+.weather-forecast-date {
+  padding: 10px;
+  font-size: 18px;
+}
+.weather-forecast-temperature {
+  padding: 10px;
+}
+.weather-forecast-temperature-min {
+  font-size: 13px;
 }
