@@ -56,6 +56,11 @@ form {
   text-align: center;
   padding: 20px;
 }
+.current-temperature .active {
+  color: #effbff;
+  cursor: default;
+  text-decoration: none;
+}
 strong {
   padding-left: 10px;
   font-size: 25px;
