@@ -40,7 +40,8 @@ dayNow.innerHTML = `${currentDay}`;
 dateNow.innerHTML = `${currentMonth}, ${currentDate}th`;
 timeNow.innerHTML = `${currentHour}:${currentMinute}`;
 //
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
@@ -64,6 +65,13 @@ function displayForecast() {
 
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
+}
+//
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apiKey = "3959d341d5294447fa3d604e983c20c9";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
 }
 //
 function displayTemperature(response) {
@@ -115,6 +123,8 @@ function displayTemperature(response) {
   if (mainIcon === "50d" || mainIcon === "50n") {
     document.querySelector("#icon").setAttribute("src", "images/fog-60.png");
   }
+
+  getForecast(response.data.coord);
 }
 
 function search(city) {
@@ -151,5 +161,3 @@ fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
-
-displayForecast();
