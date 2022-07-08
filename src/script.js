@@ -40,6 +40,32 @@ dayNow.innerHTML = `${currentDay}`;
 dateNow.innerHTML = `${currentMonth}, ${currentDate}th`;
 timeNow.innerHTML = `${currentHour}:${currentMinute}`;
 //
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Sat", "Sun", "Mon", "Tue", "Wed"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      ` 
+            <div class="col">
+              <div class="weather-forecast-block">
+                <div class="weather-forecast-date">${day}</div>
+                <img src="images/heavy-rain-60.png" height="30" alt="" />
+                <div class="weather-forecast-temperature">
+                  <span class="weather-forecast-temperature-max"> 30° </span>
+                  <span class="weather-forecast-temperature-min"> 20° </span>
+                </div>
+              </div>
+            </div>
+          `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+//
 function displayTemperature(response) {
   let temperatureElement = document.querySelector("#temperature");
   let cityElement = document.querySelector("#city");
@@ -47,13 +73,12 @@ function displayTemperature(response) {
   let windElement = document.querySelector("#wind");
   let iconElementAlt = document.querySelector("#icon");
 
+  celsiusTemperature = response.data.main.temp;
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
   cityElement.innerHTML = response.data.name;
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
   iconElementAlt.setAttribute("alt", response.data.weather[0].description);
-
-  celsiusTemperature = response.data.main.temp;
 
   let mainIcon = response.data.weather[0].icon;
   if (mainIcon === "01d" || mainIcon === "01n") {
@@ -126,3 +151,5 @@ fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
+
+displayForecast();
