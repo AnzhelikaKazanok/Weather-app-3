@@ -95,3 +95,6 @@ strong {
 .weather-forecast-temperature-min {
   font-size: 13px;
 }
+.weather-forecast-temperature-max {
+  font-weight: bold;
+}

@@ -55,7 +55,39 @@ function displayForecast(response) {
 
   let forecastHTML = `<div class="row">`;
   forecast.forEach(function (forecastDay, index) {
-    if (index < 5) {
+    let forecastIcon = forecastDay.weather[0].icon;
+    if (forecastIcon === "01d" || forecastIcon === "01n") {
+      forecastIcon = `images/sun-60.png`;
+    }
+    if (
+      forecastIcon === "02d" ||
+      forecastIcon === "02n" ||
+      forecastIcon === "03d" ||
+      forecastIcon === "03n" ||
+      forecastIcon === "04d" ||
+      forecastIcon === "04n"
+    ) {
+      forecastIcon = `images/cloud-60.png`;
+    }
+    if (
+      forecastIcon === "09d" ||
+      forecastIcon === "09n" ||
+      forecastIcon === "10d" ||
+      forecastIcon === "10n"
+    ) {
+      forecastIcon = `images/heavy-rain-60.png`;
+    }
+    if (forecastIcon === "11d" || forecastIcon === "11n") {
+      forecastIcon = `images/storm-60.png`;
+    }
+    if (forecastIcon === "13d" || forecastIcon === "13n") {
+      forecastIcon = `images/snowy-winter-60.png`;
+    }
+    if (forecastIcon === "50d" || forecastIcon === "50n") {
+      forecastIcon = `images/fog-60.png`;
+    }
+
+    if (index < 5 && index > 0) {
       forecastHTML =
         forecastHTML +
         ` 
@@ -63,8 +95,10 @@ function displayForecast(response) {
               <div class="weather-forecast-block">
                 <div class="weather-forecast-date">${formatDay(
                   forecastDay.dt
-                )}</div>${index}
-                <img src="images/heavy-rain-60.png" height="30" alt="" />
+                )}</div>
+                <img src=${forecastIcon} height="30" alt=${
+          forecastDay.weather[0].main
+        } />
                 <div class="weather-forecast-temperature">
                   <span class="weather-forecast-temperature-max"> ${Math.round(
                     forecastDay.temp.max
