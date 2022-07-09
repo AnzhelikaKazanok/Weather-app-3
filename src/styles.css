@@ -58,12 +58,30 @@ form {
 }
 .current-temperature .active {
   color: #effbff;
-  cursor: default;
+  cursor: pointer;
   text-decoration: none;
+}
+.current-temperature img {
+  margin: 0 10px 15px 0;
+  width: 55px;
+  height: 55px;
+  line-height: 1;
+}
+.current-humidity-windy .humidity-img {
+  margin-right: 15px;
+}
+.current-humidity-windy .wind-img {
+  margin-right: 3px;
 }
 strong {
   padding-left: 10px;
-  font-size: 25px;
+  font-size: 45px;
+  font-weight: 400;
+}
+.current-temperature .units {
+  position: relative;
+  font-size: 16px;
+  top: -17px;
 }
 .humidity-windy {
   text-align: center;
