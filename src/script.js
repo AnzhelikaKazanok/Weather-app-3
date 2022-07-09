@@ -87,7 +87,7 @@ function displayForecast(response) {
       forecastIcon = `images/fog-60.png`;
     }
 
-    if (index < 5 && index > 0) {
+    if (index < 6 && index > 0) {
       forecastHTML =
         forecastHTML +
         ` 
